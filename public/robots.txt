@@ -1,0 +1,10 @@
+# Morbitech — robots.txt
+User-agent: *
+Allow: /
+
+# Block internal pages from indexing
+Disallow: /checkout
+Disallow: /profile
+Disallow: /confirmation
+
+Sitemap: https://morbitech.com/sitemap.xml

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#3b82f6" />
+  <title>Morbitech — Offline</title>
+  <link rel="icon" href="/icons/icon-96.png" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'DM Sans', 'Segoe UI', sans-serif;
+      background: #050c18;
+      color: #e8edf5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 32px 24px;
+    }
+    .logo { font-size: 28px; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 28px; }
+    .logo span { color: #3b82f6; }
+    .icon { font-size: 64px; margin-bottom: 20px; }
+    h1 { font-size: 24px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 10px; }
+    p {
+      color: rgba(255,255,255,0.5);
+      font-size: 15px;
+      line-height: 1.75;
+      max-width: 360px;
+      margin-bottom: 32px;
+    }
+    .btn-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    button {
+      padding: 12px 28px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary { background: #3b82f6; color: #fff; }
+    .btn-wa {
+      background: #25d366;
+      color: #fff;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .cached-note {
+      margin-top: 36px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.25);
+      max-width: 320px;
+      line-height: 1.6;
+    }
+    .status-dot {
+      display: inline-block;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #f87171;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">Morbi<span>tech</span></div>
+  <div class="icon">📡</div>
+  <h1>You're offline</h1>
+  <p>
+    <span class="status-dot"></span>No internet connection detected.<br />
+    Check your network and try again. You can also reach us directly on WhatsApp — we're always available.
+  </p>
+  <div class="btn-row">
+    <button class="btn-primary" onclick="window.location.reload()">↻ Try again</button>
+    <a class="btn-wa" href="https://wa.me/2348125911805?text=Hello%20Morbitech%2C%20I%27m%20trying%20to%20access%20your%20website%20but%20I%27m%20offline.%20Can%20you%20help%3F" target="_blank">
+      💬 WhatsApp us
+    </a>
+  </div>
+  <p class="cached-note">
+    Some pages may still be available if you've visited them before. Try navigating back to the home page.
+    <br/><br/>
+    📞 08061233018 &nbsp;·&nbsp; 📧 info@morbitech.com
+  </p>
+
+  <script>
+    // Auto-reload when connection is restored
+    window.addEventListener('online', () => window.location.reload());
+  </script>
+</body>
+</html>
